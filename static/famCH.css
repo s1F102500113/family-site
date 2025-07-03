@@ -14,3 +14,7 @@ hr {
     top: 530px;
 
 }
+
+::placeholder {
+    color: #c7c7c7;
+}
