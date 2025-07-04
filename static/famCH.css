@@ -4,6 +4,24 @@
     left: 150px;
 }   
 
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-side {
+    width: 20%; 
+}
+
+.contents{
+    width: 60%;
+}
+
+.right-side {
+    width: 20%;
+}
+
+
 #submit {
     background-color: rgb(9, 220, 239);
     

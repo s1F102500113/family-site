@@ -6,22 +6,23 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24)
 message = ["匿名の投稿サイトです"]
 
+@app.route("/famCH", methods=["POST"])
+def famCH():
+
+    session['text'] = request.form.get('text')
+    
+    return redirect(url_for('top'))
 
 @app.route('/')
 def top():
     global message
-    if session.get('message') == "":
+    if session.get('text') == "":
         print("空白")
     else:
-        message.append(session.get('message'))
+        message.append(session.get('text'))
     return render_template('famCH.html', message=message)
 
-@app.route("/famCH", methods=["POST"])
-def famCH():
 
-    session['message'] = request.form.get('text')
-    
-    return redirect(url_for('top'))
 
 
 if __name__ == '__main__':
