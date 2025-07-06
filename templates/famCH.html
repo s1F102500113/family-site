@@ -8,7 +8,7 @@
 
   <body>
     <div class="container">
-       <div class="left-side">
+      <div class="left-side">
 
 
       </div>
@@ -17,9 +17,21 @@
         <form class="textarea" novalidate action="/famCH" method="post">
             <textarea name="text" rows="3" cols="30" placeholder="匿名投稿です。"></textarea>
             <button id="submit" type="submit">投稿</button>
+            <button id="reset" type="reset">🔃</button>
         </form>
         
-        {{message|safe}}
+        <ul class="moji">
+          <p>- - -以下匿名の投稿です- - -</p>
+          {% for msg in message %}  
+
+            <li class="msg">
+              <h6>ID: {{id|safe}}</h6>
+              <span>{{ msg }}</span>
+            </li>
+
+          {% endfor %}        
+        </ul>      
+
       </div>
        <div class="right-side">
 

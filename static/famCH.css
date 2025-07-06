@@ -1,12 +1,17 @@
 .textarea{
-    position: relative;
-    top: 550px;
-    left: 150px;
+    position: fixed;
+    top: 560px;
+    left: 600px;
+    display: flex;
 }   
 
+.textarea button {
+    margin: 10px 10px 10px 10px;
+}
 .container {
     display: flex;
     flex-direction: row;
+
 }
 
 .left-side {
@@ -15,6 +20,9 @@
 
 .contents{
     width: 60%;
+    display: flex; 
+    flex-direction: column;
+    
 }
 
 .right-side {
@@ -28,11 +36,41 @@
 }
 
 hr {
-    position: relative;
-    top: 530px;
+    display: none;
 
 }
 
 ::placeholder {
     color: #c7c7c7;
+}
+
+.moji {
+    width: 700px;
+    height: 530px;
+    list-style-type: none;
+    overflow-y: scroll;
+    background-color: #c7c7c7;
+}
+
+.moji p {
+    color: #817f7f;
+    margin-left: 230px;
+}
+.msg {
+    
+    margin: 10px 10px 10px 10px;
+    
+    
+}
+
+.msg span {
+    background-color: rgb(147, 218, 147);
+    padding : 3px;
+    border-radius: 5px;
+
+}
+
+.msg h6 {
+    margin: 0px 0px 0px 0px;
+
 }
