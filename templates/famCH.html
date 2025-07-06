@@ -25,7 +25,7 @@
           {% for msg in message %}  
 
             <li class="msg">
-              <h6>ID: {{id|safe}}</h6>
+              <h6>ID: {{id|safe}} <br> ({{current_time|safe}})</h6>
               <span>{{ msg }}</span>
             </li>
 
